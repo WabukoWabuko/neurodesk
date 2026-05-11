@@ -1,24 +1,21 @@
 {
   "name": "neurodesk",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "turbo run dev",
     "dev:gateway": "turbo run dev --filter=@neurodesk/gateway",
     "dev:desktop": "cd apps/desktop && pnpm tauri dev",
-    "build": "turbo run build"
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "type-check": "turbo run type-check",
+    "format": "prettier --write \"**/*.{ts,tsx,md,json}\"",
+    "setup": "pnpm install && docker compose -f infrastructure/docker/docker-compose.dev.yml up -d"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devEngines": {
-    "packageManager": {
-      "name": "pnpm",
-      "version": "^11.0.9",
-      "onFail": "download"
-    }
+  "devDependencies": {
+    "turbo": "latest",
+    "prettier": "^3.3.3",
+    "typescript": "^5.6.0"
   },
-  "type": "module"
+  "packageManager": "pnpm@9.12.0"
 }
