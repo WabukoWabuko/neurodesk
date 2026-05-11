@@ -1,0 +1,19 @@
+{
+  "name": "@neurodesk/ui",
+  "version": "0.1.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc -w"
+  },
+  "dependencies": {
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^2.5.2",
+    "lucide-react": "^0.441.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0"
+  }
+}
